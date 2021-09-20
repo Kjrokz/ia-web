@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .screen-contenedor {
+    display: block !important;
+  }
+  .item {
+    width: 100% !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  .responsive {
+    display: inline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .paddingB {
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive {
+    display: none !important;
+  }
+  .paddingB {
+    padding-bottom: 0px !important;
+  }
+} ;
