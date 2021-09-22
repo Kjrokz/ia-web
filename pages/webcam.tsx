@@ -95,15 +95,6 @@ const Webcam: React.FC = (): JSX.Element => {
                   }}
                 />
               </div>
-              <Button
-                className="boton boton-margin"
-                /* onClick={capture} */ onClick={() => {
-                  setInicio(!inicio);
-                  //setPreviewResult("");
-                }}
-              >
-                {inicio ? "Stop" : "Start"}
-              </Button>
 
               {/* <input
                 type="file"
@@ -136,6 +127,17 @@ const Webcam: React.FC = (): JSX.Element => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="result">
+          <Button
+            className="boton boton-margin"
+            /* onClick={capture} */ onClick={() => {
+              setInicio(!inicio);
+              //setPreviewResult("");
+            }}
+          >
+            {inicio ? "Stop" : "Start"}
+          </Button>
         </div>
         {/*  <div>
           <h2>Resultado</h2>

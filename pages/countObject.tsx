@@ -65,7 +65,7 @@ const CountObject = () => {
       <Layout>
         <div className="screen-contenedor padding">
           <div className="item">
-            <form className="centrar" onSubmit={handleSubmit}>
+            <div className="centrar">
               <h2>Image</h2>
               <div className="foto">
                 {preview.length > 0 && (
@@ -88,20 +88,7 @@ const CountObject = () => {
                   }}
                 />
               </div>
-
-              <Button className="boton" type="submit">
-                {loading ? (
-                  <Spinner
-                    animation="border"
-                    variant="light"
-                    aria-hidden="true"
-                    size="sm"
-                  />
-                ) : (
-                  "Count Objects"
-                )}
-              </Button>
-            </form>
+            </div>
           </div>
           <div className="item">
             {/* {preview.length > 0 && (
@@ -123,6 +110,20 @@ const CountObject = () => {
             </div>
           </div>
         </div>
+        <form onSubmit={handleSubmit} className="result">
+          <Button className="boton" type="submit">
+            {loading ? (
+              <Spinner
+                animation="border"
+                variant="light"
+                aria-hidden="true"
+                size="sm"
+              />
+            ) : (
+              "Count Objects"
+            )}
+          </Button>
+        </form>
         {previewResult.length > 0 && (
           <div className="resultado">
             <h2>Resultado</h2>
